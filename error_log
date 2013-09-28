@@ -1,0 +1,2 @@
+[13-Aug-2013 21:11:57 America/Denver] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home/okmtechc/public_html/stage2/productivity/protected/models/Operacion.php on line 146
+[13-Aug-2013 21:14:58 America/Denver] PHP Fatal error:  Using $this when not in object context in /home/okmtechc/public_html/stage2/productivity/protected/models/Operacion.php on line 147

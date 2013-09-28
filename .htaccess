@@ -1,0 +1,15 @@
+# Use PHP5 Single php.ini as default
+#AddHandler application/x-httpd-php54s .php
+
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, us it directly
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php

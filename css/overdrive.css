@@ -1,0 +1,24 @@
+.wait-2
+{
+	background: url('../images/ajax-loader-2.gif') no-repeat left center;
+	height: 25px;
+}
+
+.wait-3
+{
+	background: url('../images/ajax-loader-3.gif') no-repeat left center;
+	height: 25px;
+}
+
+.odd
+{
+background-color: #EFF4FA;
+padding: 3px;
+border-bottom: 1px solid #aaa;
+}
+
+.even
+{
+padding: 3px;
+border-bottom: 1px solid #aaa;
+}
