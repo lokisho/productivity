@@ -51,7 +51,7 @@
 		<div class="clear"></div>
 		
 		
-		<div class="row span-14">
+		<div class="row span-20">
 			<div class="span-3">
 				<div><?php echo $form->labelEx($model,'fechaPausa'); ?></div>
 				<div>
@@ -93,6 +93,16 @@
 				<div><?php echo CHtml::label('Hora Inicio','Operacion_horaInicio'); ?></div>
 				<div><?php echo $model->horaInicio;?></div>
 			</div>
+			
+			<div class="span-3">
+				<div><?php echo CHtml::label('Fecha Fin','Operacion_fechaFin'); ?></div>
+				<div><?php echo date('d-M-Y', strtotime($model->fechaFin)); ?></div>
+			</div>
+			
+			<div class="span-3">
+				<div><?php echo CHtml::label('Hora Fin','Operacion_horaFin'); ?></div>
+				<div><?php echo $model->horaFin;?></div>
+			</div>
 		</div>
 		
 		
@@ -111,6 +121,16 @@
 			?>
 			<?php echo $form->textField($model,'tiempoReal',array('class'=>'span-3 last')); ?>
 		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="row span-3">
+			<?php
+				echo CHtml::checkbox('Operacion[reiniciar]',false)." ".CHtml::label('Reiniciar','Operacion_reiniciar');
+				
+			?>
+		</div>
+		
 		
 	</div><!-- subcontainer-2 -->
 	<div class="clear"></div>

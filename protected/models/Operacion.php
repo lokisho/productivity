@@ -26,6 +26,8 @@
  */
 class Operacion extends CActiveRecord
 {
+	
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -40,6 +42,7 @@ class Operacion extends CActiveRecord
 	 const EST_PAUSADO=2;
 	 const EST_TERMINADO=3;
 	 
+	 public $reiniciar;
 	 
 	 
 	public static function model($className=__CLASS__)
@@ -68,7 +71,7 @@ class Operacion extends CActiveRecord
 			array('tiempoPlaneado, tiempoReal', 'numerical'),
 			array('id_proyecto', 'length', 'max'=>20),
 			array('descripcion', 'length', 'max'=>250),
-			array('fechaFin,horaFin,fechaPausa,horaPausa, numPausa','safe'),
+			array('fechaFin,horaFin,fechaPausa,horaPausa, numPausa,reiniciar','safe'),
 			array('activo', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

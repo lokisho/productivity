@@ -56,7 +56,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=stage2',
+			'connectionString' => 'mysql:host=localhost;dbname=okmapps',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'Bl4ckj4ck#',

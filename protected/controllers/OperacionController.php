@@ -145,6 +145,14 @@ class OperacionController extends Controller
 			if($model->horaPausa == "")
 				$model->horaPausa = null;
 			
+			if(isset($_POST['Operacion']['reiniciar'])&&$_POST['Operacion']['reiniciar']==1)
+			{
+				$model->fechaPausa = $this->fechaInicio();
+				$model->horaPausa = $this->horaInicio();
+				$model->id_estado = $model::EST_ACTIVO;
+			}	
+			
+			
 			if(! $model->save())
 				throw new CHttpException('501','Error al actualizar la operacion');
 				//$this->redirect(array('view','id'=>$model->id));
