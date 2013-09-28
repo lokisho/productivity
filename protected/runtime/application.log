@@ -2759,3 +2759,94 @@ Stack trace:
 REQUEST_URI=/productivity/index.php/operacion/create
 HTTP_REFERER=http://www.stage2.okmtech.com/productivity/
 ---
+2013/09/28 15:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getSecciones".' in /data/www/stage2/yii/framework/web/CController.php:484
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/CController.php(271): CController->missingAction('getSecciones')
+#1 /data/www/stage2/yii/framework/web/CWebApplication.php(283): CController->run('getSecciones')
+#2 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('informes/getSec...')
+#3 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /data/www/stage2/productivity/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/productivity/index.php/informes/getSecciones
+HTTP_REFERER=http://www.stage2.okmtech.com/productivity/index.php/informes/informeOperaciones
+---
+2013/09/28 15:20:56 [error] [php] get_class() expects parameter 1 to be object, string given (/data/www/stage2/yii/framework/web/helpers/CHtml.php:2123)
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/helpers/CHtml.php(1514): resolveNameID()
+#1 /data/www/stage2/yii/framework/web/widgets/CActiveForm.php(764): activeDropDownList()
+#2 /data/www/stage2/productivity/protected/views/informes/_sub_0_informeOperaciones.php(102): CActiveForm->dropDownList()
+#3 /data/www/stage2/yii/framework/web/CBaseController.php(127): require()
+#4 /data/www/stage2/yii/framework/web/CBaseController.php(96): InformesController->renderInternal()
+#5 /data/www/stage2/yii/framework/web/CController.php(870): InformesController->renderFile()
+#6 /data/www/stage2/productivity/protected/views/informes/informeOperaciones.php(33): InformesController->renderPartial()
+#7 /data/www/stage2/yii/framework/web/CBaseController.php(127): require()
+#8 /data/www/stage2/yii/framework/web/CBaseController.php(96): InformesController->renderInternal()
+#9 /data/www/stage2/yii/framework/web/CController.php(870): InformesController->renderFile()
+#10 /data/www/stage2/yii/framework/web/CController.php(783): InformesController->renderPartial()
+#11 /data/www/stage2/productivity/protected/controllers/InformesController.php(60): InformesController->render()
+#12 /data/www/stage2/yii/framework/web/actions/CInlineAction.php(50): InformesController->actionInformeOperaciones()
+#13 /data/www/stage2/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /data/www/stage2/yii/framework/web/filters/CFilterChain.php(134): InformesController->runAction()
+#15 /data/www/stage2/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /data/www/stage2/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#17 /data/www/stage2/yii/framework/web/filters/CInlineFilter.php(59): InformesController->filterAccessControl()
+#18 /data/www/stage2/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#19 /data/www/stage2/yii/framework/web/CController.php(292): CFilterChain->run()
+#20 /data/www/stage2/yii/framework/web/CController.php(266): InformesController->runActionWithFilters()
+#21 /data/www/stage2/yii/framework/web/CWebApplication.php(283): InformesController->run()
+#22 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#23 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /data/www/stage2/productivity/index.php(13): CWebApplication->run()
+REQUEST_URI=/productivity/index.php/informes/informeOperaciones
+in /data/www/stage2/productivity/protected/views/informes/_sub_0_informeOperaciones.php (102)
+in /data/www/stage2/productivity/protected/views/informes/informeOperaciones.php (33)
+in /data/www/stage2/productivity/protected/controllers/InformesController.php (60)
+2013/09/28 15:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "operacion".' in /data/www/stage2/yii/framework/web/CController.php:484
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/CController.php(271): CController->missingAction('operacion')
+#1 /data/www/stage2/yii/framework/web/CWebApplication.php(283): CController->run('operacion')
+#2 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('informes/operac...')
+#3 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /data/www/stage2/productivity/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/productivity/index.php/informes/operacion/getSecciones
+HTTP_REFERER=http://www.stage2.okmtech.com/productivity/index.php/informes/informeOperaciones
+---
+2013/09/28 15:26:32 [error] [php] Undefined index: id_proyecto (/data/www/stage2/productivity/protected/controllers/OperacionController.php:283)
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/filters/CFilterChain.php(134): OperacionController->runAction()
+#1 /data/www/stage2/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /data/www/stage2/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /data/www/stage2/yii/framework/web/filters/CInlineFilter.php(59): OperacionController->filterAccessControl()
+#4 /data/www/stage2/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /data/www/stage2/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /data/www/stage2/yii/framework/web/CController.php(266): OperacionController->runActionWithFilters()
+#7 /data/www/stage2/yii/framework/web/CWebApplication.php(283): OperacionController->run()
+#8 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#9 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /data/www/stage2/productivity/index.php(13): CWebApplication->run()
+REQUEST_URI=/productivity/index.php/operacion/getSecciones
+in /data/www/stage2/productivity/protected/controllers/OperacionController.php (283)
+in /data/www/stage2/productivity/index.php (13)
+2013/09/28 15:27:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /data/www/stage2/yii/framework/web/CController.php:484
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/CController.php(271): CController->missingAction('index.php')
+#1 /data/www/stage2/yii/framework/web/CWebApplication.php(283): CController->run('index.php')
+#2 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('informes/index....')
+#3 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /data/www/stage2/productivity/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/productivity/index.php/informes/index.php/operacion/getSecciones
+HTTP_REFERER=http://www.stage2.okmtech.com/productivity/index.php/informes/informeOperaciones
+---
+2013/09/28 15:28:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "operacion".' in /data/www/stage2/yii/framework/web/CController.php:484
+Stack trace:
+#0 /data/www/stage2/yii/framework/web/CController.php(271): CController->missingAction('operacion')
+#1 /data/www/stage2/yii/framework/web/CWebApplication.php(283): CController->run('operacion')
+#2 /data/www/stage2/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('informes/operac...')
+#3 /data/www/stage2/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /data/www/stage2/productivity/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/productivity/index.php/informes/operacion/getSecciones
+HTTP_REFERER=http://www.stage2.okmtech.com/productivity/index.php/informes/informeOperaciones
+---

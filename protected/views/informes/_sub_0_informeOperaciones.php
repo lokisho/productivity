@@ -53,10 +53,28 @@
 <div class="row">
 	
 	<div class="span-3 first">
-		<?php echo CHtml::label('Proyecto','Inf_Operaciones_id_proyecto',array('class'=>'input-1')) ?>
+		<?php echo CHtml::label('Proyecto','Inf_Operaciones_id_proyecto',array('class'=>'input-1')); ?>
 	</div>
 	<div class="span-6">
-		<?php echo CHtml::dropDownList('Inf_Operaciones[id_proyecto]','empty',Proyecto::getProyectos(array('dropdown'=>'1')),array('empty'=>'Seleccione Uno','class'=>'span-6 last'));?>
+		<?php /*echo CHtml::dropDownList('Inf_Operaciones[id_proyecto]','empty',Proyecto::getProyectos(array('dropdown'=>'1')),array('empty'=>'Seleccione Uno','class'=>'span-6 last')); */
+			
+			echo CHtml::dropDownList('Inf_Operaciones[id_proyecto]','empty',Proyecto::getProyectos(array('dropdown'=>'1')),
+			array(
+				'empty'=>'Proyecto',
+				'class'=>'span-6 last',
+				'ajax'=> array(
+						'type'=>'POST',
+						'url'=>'/productivity/index.php/operacion/getSecciones',
+						'update'=>'#Inf_Operaciones_id_seccion',
+						'data'=>array('id_proyecto'=>'js:this.value'),
+					),
+				
+				
+				));
+			
+			
+			
+		?>
 	</div>
 	<div class="span-3">
 		<?php echo CHtml::label('Usuario','Inf_Operaciones_id_usuario',array('class'=>'input-1')) ?>
@@ -78,7 +96,13 @@
 		<?php echo CHtml::label('Seccion','Inf_Operaciones_id_seccion',array('class'=>'input-1')) ?>
 	</div>
 	<div class="span-6 last">
-		<?php echo CHtml::dropDownList('Inf_Operaciones[id_seccion]','empty',Seccion::getSecciones(array('dropdown'=>'1')),array('empty'=>'Seleccione Una','class'=>'span-6 last'));?>
+		<?php //echo CHtml::dropDownList('Inf_Operaciones[id_seccion]','empty',Seccion::getSecciones(array('dropdown'=>'1')),array('empty'=>'Seleccione Una','class'=>'span-6 last'));
+		
+		echo CHtml::dropDownList('Inf_Operaciones[id_seccion]','',array(),
+				array('empty'=>'Seccion','class'=>'span-6 last'));
+		
+		?>
+		
 	</div>
 </div>
 <div class="clear"></div>
